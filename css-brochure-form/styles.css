@@ -19,10 +19,7 @@ label {
   font-size: 14px;
 }
 
-#email,
-#name,
-#hiring,
-#engineers {
+.inputs {
   width: 100%;
   border-radius: 5px;
   height: 50px;
