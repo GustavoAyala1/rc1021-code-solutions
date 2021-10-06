@@ -47,7 +47,7 @@ label {
   font-weight: 500;
 }
 
-button {
+.submitBtn {
   background-color: orangered;
   color: white;
   height: 40px;
