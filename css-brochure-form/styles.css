@@ -30,10 +30,7 @@ label {
   padding-left: 5px;
 }
 
-#email:focus,
-#name:focus,
-#hiring:focus,
-#engineers:focus {
+.inputs:focus {
   background-color: rgb(243, 243, 243);
 }
 
