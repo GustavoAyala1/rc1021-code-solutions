@@ -7,24 +7,24 @@
   /* border: 5px solid black; */
 }
 
+img {
+  width: 100%;
+}
+
 .row {
   display: flex;
-  flex-wrap: nowrap;
 }
 
 .column-one-third {
   flex-basis: calc(100% / 3);
-  width: 100%;
 }
 
 .column-one-fourth {
-  width: 100%;
   flex-basis: 25%;
 }
 
 .column-two-thirds {
   flex-basis: calc(2 * (100% / 3));
-  width: 100%;
 }
 
 .column-full {
