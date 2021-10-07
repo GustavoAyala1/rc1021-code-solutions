@@ -1,0 +1,26 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  /* border: 5px solid black; */
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.column-one-third {
+  flex-basis: calc(100% / 3);
+}
+
+.column-one-fourth {
+  width: 100%;
+  flex-basis: 25%;
+}
+
+.column-two-thirds {
+  flex-basis: calc(2 * (100% / 3));
+}
