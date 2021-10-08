@@ -1,0 +1,67 @@
+.container {
+  max-width: 1000px;
+  position: relative;
+  left: 400px;
+  font-family: "Karla", serif;
+
+  /* border: 5px solid black; */
+}
+
+.header {
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+h4 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.half-column {
+  flex-basis: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 20px;
+}
+
+.third-column {
+  flex-basis: calc(100% / 3);
+}
+
+.two-thirds-column {
+  flex-basis: calc(2 * 100% / 3);
+}
+
+.svg {
+  position: relative;
+  left: 20px;
+}
+
+img {
+  width: 130px;
+}
+
+.btn {
+  text-transform: uppercase;
+  width: 200px;
+  height: 40px;
+  position: relative;
+  left: 40%;
+  background-color: white;
+  border: 2px solid orangered;
+  color: orangered;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
