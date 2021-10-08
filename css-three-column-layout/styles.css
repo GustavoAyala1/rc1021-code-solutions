@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(38, 170, 247);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  color: white;
+  font-family: "Lato", sans-serif;
+
+  /* border: 5px solid black; */
+}
+
+.row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 50px;
+}
+
+img {
+  width: 50%;
+  margin: 25% 25%;
+}
+
+.column-third {
+  flex-basis: calc(90% / 3);
+  text-align: center;
+}
+
+.circle {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+}
