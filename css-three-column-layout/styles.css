@@ -5,9 +5,10 @@ body {
 .container {
   max-width: 1000px;
   margin: 50px auto;
-  border: 5px solid black;
   color: white;
   font-family: "Lato", sans-serif;
+
+  /* border: 5px solid black; */
 }
 
 .row {
