@@ -1,0 +1,137 @@
+.container {
+  position: relative;
+  width: 1200px;
+  font-style: 'Avenir', sans-serif;
+  margin: 5px auto;
+  border: 5px solid black;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.half-column {
+  flex-basis: 50%;
+}
+
+.full-column {
+  flex-basis: 100%;
+}
+
+/* NAV ITEMS */
+
+.navItem {
+  margin: auto 10px;
+  color: rgb(179, 177, 177);
+  font-size: 1rem;
+  position: relative;
+  right: 22%;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 2px solid lightgrey;
+  position: relative;
+}
+
+.logo img {
+  position: relative;
+  height: 50%;
+  top: 25%;
+  left: 20%;
+}
+
+.navBar {
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+.navBar a {
+  text-decoration: none;
+}
+
+.navBtn {
+  width: 100px;
+  height: 40px;
+  background-color: rgba(42, 68, 101, 255);
+  border-radius: 5px;
+}
+
+/* MID SECTION IMG */
+
+.midSect {
+  margin-top: 70px;
+  width: 100%;
+  position: relative;
+}
+
+.midSect img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+}
+
+.heroP {
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 30%;
+  left: 15%;
+  line-height: 1.7;
+  font-size: 18px;
+  font-family: "Avenir ", serif;
+  font-weight: 400;
+}
+
+.heroTxt {
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 10%;
+  left: 15%;
+  font-size: 40px;
+}
+
+.heroBtn {
+  background-color: rgba(42, 68, 101, 255);
+  border-radius: 5px;
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 75%;
+  left: 15%;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+
+/* Clinicians Sections */
+
+.clinSect {
+  background-color: rgb(247, 247, 247);
+  margin: 70px auto 0;
+  width: 90%;
+  height: 400px;
+  display: block;
+  color: rgb(109, 109, 109);
+}
+
+.clinTxt {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.clinHead {
+  font-size: 30px;
+}
+
+.clinBody {
+  font-size: 18px;
+}
