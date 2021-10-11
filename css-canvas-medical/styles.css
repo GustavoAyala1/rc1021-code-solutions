@@ -1,6 +1,7 @@
 .container {
   position: relative;
-  width: 1200px;
+
+  /* width: 1200px; */
   font-style: 'Avenir', sans-serif;
   margin: 5px auto;
   border: 5px solid black;
@@ -31,13 +32,13 @@
 
 .header {
   width: 100%;
-  border-bottom: 2px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
   position: relative;
 }
 
 .logo img {
   position: relative;
-  height: 50%;
+  height: 45%;
   top: 25%;
   left: 20%;
 }
@@ -134,4 +135,30 @@
 
 .clinBody {
   font-size: 18px;
+}
+
+/* Get Started */
+
+.readySect {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.startedBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.readyBtn {
+  background-color: rgba(42, 68, 101, 255);
+  border-radius: 5px;
+  color: rgba(250, 252, 254, 255);
+  font-size: 16px;
+  width: 160px;
+  height: 40px;
+}
+
+.readyTxt {
+  color: rgb(109, 109, 109);
+  line-height: 0.5;
 }
