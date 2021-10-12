@@ -22,5 +22,13 @@
 }
 
 img.icons {
-  width: 80px;
+  width: 70px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 14px;
 }
