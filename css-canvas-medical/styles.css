@@ -1,8 +1,7 @@
 .container {
   position: relative;
-
-  /* width: 1200px; */
-  font-style: 'Avenir', sans-serif;
+  width: 1200px;
+  font-style: "Avenir", sans-serif;
   margin: 5px auto;
 
   /* border: 5px solid black; */
@@ -19,6 +18,14 @@
 
 .full-column {
   flex-basis: 100%;
+}
+
+.columnsixty {
+  flex-basis: 60%;
+}
+
+.columnforty {
+  flex-basis: 40%;
 }
 
 /* NAV ITEMS */
@@ -60,6 +67,10 @@
   background-color: rgba(42, 68, 101, 255);
   border-radius: 5px;
   border-style: none;
+}
+
+.active {
+  color: blue;
 }
 
 /* MID SECTION IMG */
@@ -114,6 +125,44 @@
   width: 200px;
   height: 50px;
   font-size: 20px;
+}
+
+.midSectProduct {
+  margin-top: 100px;
+  width: 100%;
+  position: relative;
+}
+
+.midSectProduct img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+}
+
+.overlayProduct {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+}
+
+.heroTxtProd {
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 23%;
+  left: 15%;
+  font-size: 32px;
+}
+
+.heroProdPar {
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 40%;
+  left: 15%;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 /* Clinicians Sections */
@@ -182,7 +231,7 @@
   margin-top: 80px;
   font-size: 12px;
   line-height: 0.8;
-  font-style: 'Tiempos Headline', serif;
+  font-style: "Tiempos Headline", serif;
 }
 
 .footerLogo {
@@ -198,7 +247,7 @@
 .footerLinks {
   margin-top: 50px;
   font-size: 16px;
-  font-style: 'Tiempos Headline', serif;
+  font-style: "Tiempos Headline", serif;
 }
 
 /* LEGAL  */
@@ -218,4 +267,34 @@
 
 .contactTxt {
   margin-left: 20px;
+}
+
+/* PRODUCTS */
+.prodContainer {
+  margin: 0 auto;
+  width: 80%;
+  background-color: rgb(247, 247, 247);
+}
+
+.prodMidSect {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.productMidTxt {
+  margin-top: 80px;
+  color: rgb(109, 109, 109);
+  font-family: "Avenir", serif;
+}
+
+.productMidTxt h1 {
+  font-size: 25px;
+}
+
+.productMidTxt p {
+  font-size: 14px;
+}
+
+.prodImg {
+  width: 100%;
 }
