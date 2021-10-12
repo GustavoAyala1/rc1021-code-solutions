@@ -22,7 +22,7 @@
 }
 
 img.icons {
-  width: 70px;
+  width: 100px;
 }
 
 h4 {
@@ -31,4 +31,8 @@ h4 {
 
 p {
   font-size: 14px;
+}
+
+h1 {
+  font-size: 40px;
 }
