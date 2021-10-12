@@ -1,0 +1,26 @@
+.container {
+  font-family: 'Barlow', sans-serif;
+  position: relative;
+  margin: 0 auto;
+  background-color: rgb(246, 247, 249);
+
+  /* width: 1200px; */
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.fourth-column {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.fourth-column img {
+  width: 100%;
+}
+
+img.icons {
+  width: 80px;
+}
