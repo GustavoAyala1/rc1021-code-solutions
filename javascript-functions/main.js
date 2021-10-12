@@ -1,33 +1,41 @@
 const convertMinutesToSeconds = minutes => {
   const seconds = minutes * 60;
-  console.log(`${minutes} minutes is ${seconds} seconds`);
+  return seconds;
 };
 
-convertMinutesToSeconds(5);
+console.log(convertMinutesToSeconds(5) + ' seconds');
 
 const greet = name => {
-  console.log(`Hey, ${name}`);
+  const greeting = 'Hey';
+  return greeting + ' ' + name;
 };
 
-greet('Gustavo');
+console.log(greet('Gustavo'));
 
 const getArea = (width, height) => {
   const area = width * height;
-  console.log(`The area is ${area}`);
+  return area;
 };
 
-getArea(17, 42);
+console.log('The area is ' + getArea(17, 42));
 
 const getFirstName = person => {
   const firstName = person.firstName;
-  console.log(`The first name is ${firstName}`);
+  return firstName;
 };
 
-getFirstName({ firstName: 'Lelouche', lastName: 'Lamperouge' });
+console.log(
+  'The first name is ' +
+    getFirstName({ firstName: 'Lelouche', lastName: 'Lamperouge' })
+);
 
 const getLastElement = array => {
   const lastElement = array.length - 1;
-  console.log(`The last element is ${array[lastElement]}`);
+  return array[lastElement];
+
 };
 
-getLastElement(['propane', 'and', 'propane', 'accessories']);
+console.log(
+  'The last element is ' +
+    getLastElement(['propane', 'and', 'propane', 'accessories'])
+);
