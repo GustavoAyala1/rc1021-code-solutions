@@ -1,0 +1,38 @@
+.container {
+  margin: 0 auto;
+  position: relative;
+
+  /* width: 1200px; */
+}
+
+.row {
+  display: flex;
+}
+
+.title {
+  margin: 0 auto;
+  font-family: "DM Sans", serif;
+}
+
+.fifthColumn {
+  flex-basis: 20%;
+  display: inline;
+}
+
+.fifthColumn img {
+  width: 100%;
+  height: 80%;
+}
+
+.fifthColumn p {
+  font-weight: 700;
+}
+
+.faint {
+  color: lightgrey;
+  font-weight: 400;
+}
+
+.price {
+  background-color: rgb(250, 226, 216);
+}
