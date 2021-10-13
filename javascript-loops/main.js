@@ -9,10 +9,12 @@
 
 const getNumbersToTen = () => {
   const numbers = [];
-  const currentNumber = 1;
-  for (let i = currentNumber; i < 11; i++) {
-    numbers.push(i);
+  let currentNumber = 1;
+  while (currentNumber < 11) {
+    numbers.push(currentNumber);
+    currentNumber += 1;
   }
+
   return numbers;
 };
 
@@ -20,9 +22,10 @@ console.log('the array to get numbers to 10:', getNumbersToTen());
 
 const getEvenNumbersToTwenty = () => {
   const evenNumbers = [];
-  const currentNumber = 2;
-  for (let i = currentNumber; i < 21; i += 2) {
-    evenNumbers.push(i);
+  let currentNumber = 2;
+  while (currentNumber <= 20) {
+    evenNumbers.push(currentNumber);
+    currentNumber += 2;
   }
   return evenNumbers;
 };
@@ -32,14 +35,14 @@ console.log('the array to get even numbers to 20:', getEvenNumbersToTwenty());
 const repeatWord = (word, times) => {
   let count = 1;
   let repeated = '';
-  for (let i = count; i <= times; i++) {
+  while (count <= times) {
     repeated += word;
     count++;
   }
   return repeated;
 };
 
-console.log('the repeated variable has:', repeatWord('cake', 5));
+console.log('the repeated variable has:', repeatWord('cake', 10));
 
 const logEachCharacter = string => {
   for (let i = 0; i < string.length; i++) {
