@@ -8,6 +8,16 @@
             introduceWarnerBro
  */
 
+// var homer = {
+//   name: "Homer Jay Simpson",
+//   age: 39,
+// };
+
+// var bart = {
+//   name: "Bartholomew JoJo Simpson",
+//   age: 10,
+// };
+
 const isUnderFive = number => {
   if (number < 5) {
     return true;
