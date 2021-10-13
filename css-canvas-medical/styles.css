@@ -209,6 +209,7 @@
   width: 160px;
   height: 40px;
   border-style: none;
+  margin-top: 15px;
 }
 
 .readyTxt {
@@ -271,9 +272,13 @@
 
 /* PRODUCTS */
 .prodContainer {
+  background-color: rgb(247, 247, 247);
+}
+
+.productContainerWhite {
   margin: 0 auto;
   width: 80%;
-  background-color: rgb(247, 247, 247);
+  background-color: white;
 }
 
 .prodMidSect {
@@ -297,4 +302,9 @@
 
 .prodImg {
   width: 100%;
+}
+
+.prodImgSmall {
+  width: 80%;
+  margin-top: 130px;
 }
