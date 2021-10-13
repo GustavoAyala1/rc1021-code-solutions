@@ -8,16 +8,6 @@
             introduceWarnerBro
  */
 
-// var homer = {
-//   name: "Homer Jay Simpson",
-//   age: 39,
-// };
-
-// var bart = {
-//   name: "Bartholomew JoJo Simpson",
-//   age: 10,
-// };
-
 const isUnderFive = number => {
   if (number < 5) {
     return true;
@@ -25,10 +15,6 @@ const isUnderFive = number => {
     return false;
   }
 };
-
-// console.log("the value is under 5:", isUnderFive(4));
-// console.log("the value is under 5:", isUnderFive(10));
-// console.log("the value is under 5:", isUnderFive(5));
 
 const isEven = number => {
   if (number % 2 === 0) {
@@ -38,10 +24,6 @@ const isEven = number => {
   }
 };
 
-// console.log("the value is even:", isEven(4));
-// console.log("the value is even:", isEven(10));
-// console.log("the value is even:", isEven(5));
-
 const startsWithJ = string => {
   if (string[0] === 'J') {
     return true;
@@ -49,13 +31,6 @@ const startsWithJ = string => {
     return false;
   }
 };
-
-// console.log("the value starts with J:", startsWithJ("JavaScript"));
-// console.log("the value starts with J:", startsWithJ("PHP"));
-// console.log("the value starts with J:", startsWithJ("HTML"));
-// console.log("the value starts with J:", startsWithJ("Java"));
-// console.log("the value starts with J:", startsWithJ("Kotlin"));
-// console.log("the value starts with J:", startsWithJ("C#"));
 
 const isOldEnoughToDrink = person => {
   if (person.age >= 21) {
@@ -65,8 +40,6 @@ const isOldEnoughToDrink = person => {
   }
 };
 
-// console.log("the person is old enough to drink:", isOldEnoughToDrink(bart));
-
 const isOldEnoughToDrive = person => {
   if (person.age >= 16) {
     return true;
@@ -75,18 +48,11 @@ const isOldEnoughToDrive = person => {
   }
 };
 
-// console.log("the person is old enough to drive:", isOldEnoughToDrive(homer));
-
 const isOldEnoughToDrinkAndDrive = person => {
   if (person) {
     return false;
   }
 };
-
-// console.log(
-//   "the person is old enough to drink and drive:",
-//   isOldEnoughToDrinkAndDrive(bart)
-// );
 
 const categorizeAcidity = pH => {
   if (pH === 7) {
@@ -100,12 +66,6 @@ const categorizeAcidity = pH => {
   }
 };
 
-// console.log("the pH level is:", categorizeAcidity(-1));
-// console.log("the pH level is:", categorizeAcidity(14.0000001));
-// console.log("the pH level is:", categorizeAcidity(7));
-// console.log("the pH level is:", categorizeAcidity(2));
-// console.log("the pH level is:", categorizeAcidity(9));
-
 const introduceWarnerBro = name => {
   if (name === 'yakko' || name === 'wakko') {
     return "We're the warner brothers!";
@@ -115,9 +75,3 @@ const introduceWarnerBro = name => {
     return 'Goodnight everybody!';
   }
 };
-
-// console.log(introduceWarnerBro("yakko"));
-// console.log(introduceWarnerBro("wakko"));
-// console.log(introduceWarnerBro("dot"));
-// console.log(introduceWarnerBro("cody"));
-// console.log(introduceWarnerBro("minerva"));
