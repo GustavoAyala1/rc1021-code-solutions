@@ -1,14 +1,20 @@
 /* exported flatten */
 const flatten = array => {
-  const subArr = [];
   const newArr = [];
 
-  for (let i = 0; i < array.length; i++) {
-    subArr.push(array[i]);
-    for (let j = 0; j < subArr.length; j++) {
-      newArr.push(subArr[j]);
-      // console.log(newArr, newArr.length);
+  let i = 0;
+  let j = 0;
+
+  while (i < array.length) {
+    while (j < array[i].length) {
+      if (j < 1) {
+        newArr.push(array[i]);
+      } else {
+        newArr.push(array[i][j]);
+      }
+      j++;
     }
+    i++;
   }
 };
 
