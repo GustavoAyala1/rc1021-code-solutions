@@ -28,6 +28,15 @@
   flex-basis: 40%;
 }
 
+.third-column {
+  flex-basis: calc(100% / 3);
+}
+
+a {
+  color: rgb(11, 11, 168);
+  text-decoration: none;
+}
+
 /* NAV ITEMS */
 
 .navItem {
@@ -70,7 +79,7 @@
 }
 
 .active {
-  color: blue;
+  color: rgb(11, 11, 168);
 }
 
 /* MID SECTION IMG */
@@ -354,4 +363,70 @@
 
 .aboutP {
   top: 45%;
+}
+
+.teamCont {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(247, 247, 247);
+  text-align: center;
+  color: rgb(109, 109, 109);
+}
+
+.teamMem img {
+  width: 60%;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.teamMem h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.teamMem p {
+  margin-top: -10px;
+}
+
+.teamTitle {
+  margin-top: 30px;
+}
+
+.clinicCont h3 {
+  margin-top: 100px;
+  font-size: 28px;
+}
+
+.ourStory {
+  text-align: center;
+}
+
+.ourStoryBody {
+  margin: 0 auto;
+  width: 60%;
+  color: rgb(109, 109, 109);
+}
+
+.ourStoryBody p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* BLOG */
+.blogCont {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  color: rgb(109, 109, 109);
+}
+
+.formClass {
+  width: 100%;
+}
+
+.formBlog {
+  width: 30%;
+  text-align: center;
+  border-style: none;
+  border-bottom: 2px solid black;
 }
