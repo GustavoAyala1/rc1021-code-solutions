@@ -82,6 +82,10 @@ img {
   border-style: none;
 }
 
+.navBtn a {
+  color: rgb(179, 177, 177);
+}
+
 .active {
   color: rgb(11, 11, 168);
 }
@@ -207,6 +211,7 @@ img {
 .readySect {
   width: 80%;
   margin: 30px auto;
+  border-top: 1px solid rgb(109, 109, 109);
 }
 
 .startedBtn {
@@ -217,7 +222,7 @@ img {
 .readyBtn {
   background-color: rgba(42, 68, 101, 255);
   border-radius: 5px;
-  color: rgba(250, 252, 254, 255);
+  color: rgb(165, 165, 165);
   font-size: 16px;
   width: 160px;
   height: 40px;
@@ -472,4 +477,54 @@ img {
 
 .blogMain p {
   color: rgb(109, 109, 109);
+}
+
+/* Contact Us */
+.contactBody {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.contactBody .half-column {
+  padding: 40px;
+  color: rgb(109, 109, 109);
+}
+
+.contactBody .half-column h2 {
+  font-size: 30px;
+}
+
+.contactBody .half-column p {
+  font-size: 22px;
+}
+
+.contactForm {
+  width: 100%;
+  text-align: center;
+  border-style: none;
+  border-bottom: 2px solid black;
+  opacity: 60%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.contactForm input:last-child {
+  height: 100px;
+}
+
+.contactBtn {
+  display: block;
+  background-color: rgba(42, 68, 101, 255);
+  border-radius: 5px;
+  color: rgb(165, 165, 165);
+  font-size: 16px;
+  width: 120px;
+  height: 40px;
+  border-style: none;
+  margin: 40px auto 0;
+}
+
+.contactTextArea {
+  height: 100px;
+  overflow: hidden;
 }
