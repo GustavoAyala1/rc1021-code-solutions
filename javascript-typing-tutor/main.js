@@ -3,9 +3,11 @@
 // const typing = (event) => {
 //   const typed = event.key;
 
-// for(let i=0;i<$span.length;i++){
-//   if()
-// }
+//   let i = 0;
+//   while (i < $span.length) {
+//     $span[i].classList.add("correct");
+//     i++;
+//   }
 // };
 
 // document.addEventListener("keydown", typing);
