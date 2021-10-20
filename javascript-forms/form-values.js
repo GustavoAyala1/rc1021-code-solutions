@@ -1,4 +1,6 @@
-const $formTwo = document.forms[0];
+const $formTwo = document.forms.contactForm;
+// const $formTwo = document.getElementById("contact-form");
+// Either way works fine by id works well
 
 const handleSubmit = event => {
   event.preventDefault();
