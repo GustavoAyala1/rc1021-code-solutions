@@ -1,28 +1,25 @@
-// const $span = document.querySelectorAll("span");
+const $span = document.querySelectorAll('span');
 
-// const typing = (event) => {
-//   const typed = event.key;
+let i = 0;
 
-//   let i = 0;
-//   while (i < $span.length) {
-//     $span[i].classList.add("correct");
-//     i++;
-//   }
-// };
+const typing = event => {
+  const typed = event.key;
+  const span = [...$span];
 
-// document.addEventListener("keydown", typing);
+  if (span[i].innerText === typed && i === 0) {
+    span[i].classList.add('correct');
+    span[i].classList.remove('currentL');
+    span[i + 1].classList.add('currentL');
+    i++;
+  } else if (span[i].innerText === typed && i !== 0) {
+    span[i].classList.add('correct');
+    span[i + 1].classList.add('currentL');
+    span[i].classList.remove('currentL');
+    span[i - 1].classList.remove('wrong');
+    i++;
+  } else {
+    span[i].classList.add = 'wrong';
+  }
+};
 
-// for (let i = 0; i < span.length; i++) {
-//   if (span[i].innerText === typed && i === 0) {
-//     span[i].classList.add("correct");
-//     span[i].classList.remove("currentL");
-//     span[i + 1].classList.add("currentL");
-//   } else if (span[i].innerText === typed && i !== 0) {
-//     span[i].classList.add("correct");
-//     span[i + 1].classList.add("currentL");
-//     span[i].classList.remove("currentL");
-//     span[i - 1].classList.remove("wrong");
-//   } else if (span[i].innerText !== typed) {
-//     span[i].classList.add = "wrong";
-//   }
-// }
+document.addEventListener('keydown', typing);
