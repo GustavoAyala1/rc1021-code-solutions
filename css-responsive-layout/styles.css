@@ -42,7 +42,7 @@ body {
     width: calc(100% / 3);
   }
 
-  .col-leg-fourth {
+  .col-lg-fourth {
     width: 25%;
   }
 }
