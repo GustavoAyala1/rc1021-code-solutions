@@ -1,0 +1,530 @@
+.container {
+  position: relative;
+  width: 1200px;
+  font-style: "Avenir", sans-serif;
+  margin: 5px auto;
+
+  /* border: 5px solid black; */
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.half-column {
+  flex-basis: 50%;
+}
+
+.full-column {
+  flex-basis: 100%;
+}
+
+.columnsixty {
+  flex-basis: 60%;
+}
+
+.columnforty {
+  flex-basis: 40%;
+}
+
+.third-column {
+  flex-basis: calc(100% / 3);
+}
+
+a {
+  color: rgb(11, 11, 168);
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* NAV ITEMS */
+
+.navItem {
+  margin: auto 10px;
+  color: rgb(179, 177, 177);
+  font-size: 1rem;
+  position: relative;
+  right: 22%;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 1px solid lightgrey;
+  position: relative;
+}
+
+.logo img {
+  position: relative;
+  height: 45%;
+  top: 25%;
+  left: 20%;
+}
+
+.navBar {
+  position: absolute;
+  right: 0;
+  top: 10%;
+}
+
+.navBar a {
+  text-decoration: none;
+}
+
+.navBtn {
+  width: 100px;
+  height: 40px;
+  background-color: rgba(42, 68, 101, 255);
+  border-radius: 5px;
+  border-style: none;
+}
+
+.navBtn a {
+  color: rgb(179, 177, 177);
+}
+
+.active {
+  color: rgb(11, 11, 168);
+}
+
+/* MID SECTION IMG */
+
+.midSect {
+  margin-top: 70px;
+  width: 100%;
+  position: relative;
+}
+
+.midSect img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+}
+
+.heroP {
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 30%;
+  left: 15%;
+  line-height: 1.7;
+  font-size: 18px;
+  font-family: "Avenir ", serif;
+  font-weight: 400;
+}
+
+.heroTxt {
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 10%;
+  left: 15%;
+  font-size: 40px;
+}
+
+.heroBtn {
+  background-color: rgba(42, 68, 101, 255);
+  border-radius: 5px;
+  border-style: none;
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 75%;
+  left: 15%;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+}
+
+.midSectProduct {
+  margin-top: 100px;
+  width: 100%;
+  position: relative;
+}
+
+.midSectProduct img {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+}
+
+.overlayProduct {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.3));
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+}
+
+.heroTxtProd {
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 23%;
+  left: 15%;
+  font-size: 32px;
+}
+
+.heroProdPar {
+  position: absolute;
+  color: rgba(250, 252, 254, 255);
+  top: 40%;
+  left: 15%;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Clinicians Sections */
+
+.clinSect {
+  background-color: rgb(247, 247, 247);
+  margin: 70px auto 0;
+  width: 90%;
+  height: 400px;
+  display: block;
+  color: rgb(109, 109, 109);
+}
+
+.clinTxt {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.clinHead {
+  font-size: 30px;
+}
+
+.clinBody {
+  font-size: 18px;
+}
+
+/* Get Started */
+
+.readySect {
+  width: 80%;
+  margin: 30px auto;
+  border-top: 1px solid rgb(109, 109, 109);
+}
+
+.startedBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.readyBtn {
+  background-color: rgba(42, 68, 101, 255);
+  border-radius: 5px;
+  color: rgb(165, 165, 165);
+  font-size: 16px;
+  width: 160px;
+  height: 40px;
+  border-style: none;
+  margin-top: 15px;
+}
+
+.readyTxt {
+  color: rgb(109, 109, 109);
+  line-height: 0.5;
+}
+
+/* FOOTER */
+
+.footer {
+  width: 90%;
+  height: 300px;
+  margin: 0 auto;
+  background-color: rgb(82, 82, 80);
+  color: rgba(250, 252, 254, 255);
+}
+
+.footerAddress {
+  margin-left: 60px;
+  margin-top: 80px;
+  font-size: 12px;
+  line-height: 0.8;
+  font-style: "Tiempos Headline", serif;
+}
+
+.footerLogo {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: rgba(250, 252, 254, 255);
+}
+
+.footerLinks {
+  margin-top: 50px;
+  font-size: 16px;
+  font-style: "Tiempos Headline", serif;
+}
+
+/* LEGAL  */
+.legal {
+  background-color: rgb(247, 247, 247);
+  margin: 0 auto;
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.legalTxt {
+  color: rgb(109, 109, 109);
+  margin: auto 60px;
+}
+
+.contactTxt {
+  margin-left: 20px;
+}
+
+/* PRODUCTS */
+.prodContainer {
+  background-color: rgb(247, 247, 247);
+}
+
+.productContainerWhite {
+  margin: 0 auto;
+  width: 80%;
+  background-color: white;
+}
+
+.prodMidSect {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.productMidTxt {
+  margin-top: 80px;
+  color: rgb(109, 109, 109);
+  font-family: "Avenir", serif;
+}
+
+.productMidTxt h1 {
+  font-size: 25px;
+}
+
+.productMidTxt p {
+  font-size: 14px;
+}
+
+.prodImg {
+  width: 100%;
+}
+
+.prodImgSmall {
+  width: 80%;
+  margin-top: 130px;
+}
+
+/* IMPLEMENTATION */
+.impP {
+  top: 40%;
+  line-height: 1.5;
+}
+
+.impMidHead {
+  margin: 120px auto 0;
+  width: 60%;
+  color: rgb(109, 109, 109);
+}
+
+.impMidHead h2 {
+  font-size: 35px;
+}
+
+.impMidBody {
+  margin: 80px auto;
+  width: 60%;
+  color: rgb(109, 109, 109);
+}
+
+.impMidBody h3 {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.impMidBody span {
+  font-size: 35px;
+  font-weight: 700;
+}
+
+.impMidBody p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* ABOUT US */
+
+.aboutTxt {
+  top: 20%;
+}
+
+.aboutP {
+  top: 45%;
+}
+
+.teamCont {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgb(247, 247, 247);
+  text-align: center;
+  color: rgb(109, 109, 109);
+}
+
+.teamMem img {
+  width: 60%;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.teamMem h3 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.teamMem p {
+  margin-top: -10px;
+}
+
+.teamTitle {
+  margin-top: 30px;
+}
+
+.clinicCont h3 {
+  margin-top: 100px;
+  font-size: 28px;
+}
+
+.ourStory {
+  text-align: center;
+}
+
+.ourStoryBody {
+  margin: 0 auto;
+  width: 60%;
+  color: rgb(109, 109, 109);
+}
+
+.ourStoryBody p {
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* BLOG */
+.blogCont {
+  width: 80%;
+  margin: 80px auto 0;
+  text-align: center;
+  color: rgb(109, 109, 109);
+}
+
+.blogCont h2 {
+  font-size: 35px;
+}
+
+.formClass {
+  width: 100%;
+}
+
+.formBlog {
+  width: 30%;
+  text-align: center;
+  border-style: none;
+  border-bottom: 2px solid black;
+  opacity: 60%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.subBtn {
+  display: block;
+  background-color: rgba(42, 68, 101, 255);
+  border-radius: 5px;
+  color: rgba(250, 252, 254, 255);
+  font-size: 16px;
+  width: 160px;
+  height: 50px;
+  border-style: none;
+  margin: 40px auto 0;
+}
+
+.blogMain {
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+}
+
+.blogMain .half-column {
+  padding: 10px;
+}
+
+.blogMain h2 {
+  margin: 0;
+  font-size: 30px;
+  color: rgb(109, 109, 109);
+}
+
+.blogMain p {
+  color: rgb(109, 109, 109);
+}
+
+/* Contact Us */
+.contactBody {
+  width: 80%;
+  margin: 50px auto;
+}
+
+.contactBody .half-column {
+  padding: 40px;
+  color: rgb(109, 109, 109);
+}
+
+.contactBody .half-column h2 {
+  font-size: 30px;
+}
+
+.contactBody .half-column p {
+  font-size: 22px;
+}
+
+.contactForm {
+  width: 100%;
+  text-align: center;
+  border-style: none;
+  border-bottom: 2px solid black;
+  opacity: 60%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.contactForm input:last-child {
+  height: 100px;
+}
+
+.contactBtn {
+  display: block;
+  background-color: rgba(42, 68, 101, 255);
+  border-radius: 5px;
+  color: rgb(165, 165, 165);
+  font-size: 16px;
+  width: 120px;
+  height: 40px;
+  border-style: none;
+  margin: 40px auto 0;
+}
+
+.contactTextArea {
+  height: 100px;
+  overflow: hidden;
+}
