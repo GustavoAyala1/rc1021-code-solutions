@@ -21,6 +21,8 @@ const player4 = {
   score: 0
 };
 
+let winner;
+
 const deck = [
   { rank: 2, suit: 'clubs', point: 2 },
   { rank: 3, suit: 'clubs', point: 3 },
@@ -77,14 +79,15 @@ const deck = [
 ];
 
 const firstRandom = () => {
-  return Math.ceil(Math.random() * 52);
+  return Math.floor(Math.random() * deck.length);
 };
 const secondRandom = () => {
-  return Math.ceil(Math.random() * 52);
+  return Math.floor(Math.random() * deck.length);
 };
 
 let result1;
 let result2;
+
 const startDealing = () => {
   for (let i = 0; i < 4; i++) {
     result1 = firstRandom();
@@ -134,12 +137,28 @@ const startDealing = () => {
       deck.splice(result2, 1);
 
     }
-
+    result1 = firstRandom();
+    result2 = secondRandom();
   }
 };
 
 startDealing();
-console.log(player1.hand, player1.score);
-console.log(player2.hand, player2.score);
-console.log(player3.hand, player3.score);
-console.log(player4.hand, player4.score);
+
+console.log(`${player1.name} has ${player1.hand[0]} of ${player1.hand[1]} and ${player1.hand[2]} of ${player1.hand[3]} `);
+console.log(`${player2.name} has ${player2.hand[0]} of ${player2.hand[1]} and ${player2.hand[2]} of ${player2.hand[3]} `);
+console.log(`${player3.name} has ${player3.hand[0]} of ${player3.hand[1]} and ${player3.hand[2]} of ${player3.hand[3]} `);
+console.log(`${player4.name} has ${player4.hand[0]} of ${player4.hand[1]} and ${player4.hand[2]} of ${player4.hand[3]} `);
+
+for (let i = 0; i < 4; i++) {
+  if (i === 0) {
+    winner = player1.name;
+  } else if (i === 1 && player1.score < player2.score) {
+    winner = player2.name;
+  } else if (i === 2 && player2.score < player3.score) {
+    winner = player3.name;
+  } else if (i === 3 && player3.score < player4.score) {
+    winner = player3.name;
+  }
+}
+
+console.log(`Congratulations to ${winner}`);
