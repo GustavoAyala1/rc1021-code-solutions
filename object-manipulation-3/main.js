@@ -92,53 +92,53 @@ const startDealing = () => {
   for (let i = 0; i < 4; i++) {
     result1 = firstRandom();
     result2 = secondRandom();
+
     if (i === 0) {
       player1.hand.push(deck[result1].rank);
       player1.hand.push(deck[result1].suit);
       player1.score += deck[result1].point;
-      deck.splice(result1, 1);
 
       player1.hand.push(deck[result2].rank);
       player1.hand.push(deck[result2].suit);
       player1.score += deck[result2].point;
+
+      deck.splice(result1, 1);
       deck.splice(result2, 1);
     } else if (i === 1) {
 
       player2.hand.push(deck[result1].rank);
       player2.hand.push(deck[result1].suit);
       player2.score += deck[result1].point;
-      deck.splice(result1, 1);
 
       player2.hand.push(deck[result2].rank);
       player2.hand.push(deck[result2].suit);
       player2.score += deck[result2].point;
-      deck.splice(result2, 1);
 
+      deck.splice(result1, 1);
+      deck.splice(result2, 1);
     } else if (i === 2) {
       player3.hand.push(deck[result1].rank);
       player3.hand.push(deck[result1].suit);
       player3.score += deck[result1].point;
-      deck.splice(result1, 1);
 
       player3.hand.push(deck[result2].rank);
       player3.hand.push(deck[result2].suit);
       player3.score += deck[result2].point;
-      deck.splice(result2, 1);
 
+      deck.splice(result1, 1);
+      deck.splice(result2, 1);
     } else if (i === 3) {
       player4.hand.push(deck[result1].rank);
       player4.hand.push(deck[result1].suit);
       player4.score += deck[result1].point;
-      deck.splice(result1, 1);
 
       player4.hand.push(deck[result2].rank);
       player4.hand.push(deck[result2].suit);
       player4.score += deck[result2].point;
-      deck.splice(result2, 1);
 
+      deck.splice(result1, 1);
+      deck.splice(result2, 1);
     }
-    result1 = firstRandom();
-    result2 = secondRandom();
   }
 };
 
