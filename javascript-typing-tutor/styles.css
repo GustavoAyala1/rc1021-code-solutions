@@ -7,10 +7,14 @@
   width: 100vw;
   height: 100vh;
   background-color: lightgrey;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 .spanCont {
+  width: 100%;
   margin: auto auto;
+  flex-basis: 100%;
 }
 
 .correct {
@@ -23,4 +27,29 @@
 
 .currentL {
   border-bottom: 5px solid black;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+
+.congratsCont {
+  margin: auto auto;
+  flex-basis: 50%;
+}
+
+.half {
+  flex-basis: 50%;
+}
+
+.redoBtn {
+  width: 300px;
+  height: 70px;
+  background-color: limegreen;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
 }
