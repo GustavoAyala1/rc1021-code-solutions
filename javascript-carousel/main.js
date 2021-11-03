@@ -16,6 +16,8 @@ const handleImg = event => {
     $dots[counter].classList.remove('far');
     $dots[$imgs.length - 1].classList.remove('fas');
     $dots[$imgs.length - 1].classList.add('far');
+    stop();
+    timer = setInterval(interval, 3000);
   } else if (dataView === 'left' && counter === 0) {
     counter = $imgs.length - 1;
     $imgs[$imgs.length - 1].classList.remove('hidden');
@@ -24,6 +26,8 @@ const handleImg = event => {
     $dots[0].classList.add('far');
     $dots[$imgs.length - 1].classList.add('fas');
     $dots[$imgs.length - 1].classList.remove('far');
+    stop();
+    timer = setInterval(interval, 3000);
   } else if (dataView === 'right') {
     counter++;
     $imgs[counter].classList.remove('hidden');
@@ -32,6 +36,8 @@ const handleImg = event => {
     $dots[counter].classList.remove('far');
     $dots[counter - 1].classList.add('far');
     $dots[counter - 1].classList.remove('fas');
+    stop();
+    timer = setInterval(interval, 3000);
   } else if (dataView === 'left') {
     counter--;
     $imgs[counter].classList.remove('hidden');
@@ -40,6 +46,8 @@ const handleImg = event => {
     $dots[counter].classList.remove('far');
     $dots[counter + 1].classList.add('far');
     $dots[counter + 1].classList.remove('fas');
+    stop();
+    timer = setInterval(interval, 3000);
   } else if (dataCarousel) {
     $imgs[counter].classList.add('hidden');
     $dots[counter].classList.remove('fas');
