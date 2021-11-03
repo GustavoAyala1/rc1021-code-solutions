@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Carousel</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <div class="row imagesContainer">
+    <div class="full arrow arrow-left">
+      <i class="fas fa-chevron-left" data-view="left"></i>
+    </div>
+    <div class="imagesRow">
+      <div class="full images">
+        <img src="images/001.png" alt="bulbasaur"  >
+      </div>
+      <div class=" full images hidden" >
+        <img src="images/004.png" alt="charmander" >
+      </div>
+      <div class=" full images hidden" >
+        <img src="images/007.png" alt="squirtale">
+      </div>
+      <div class=" full images hidden" >
+        <img src="images/025.png" alt="pikachu" >
+      </div>
+      <div class=" full images hidden" >
+        <img src="images/039.png" alt="jigglypuff" >
+      </div>
+    </div>
+    <div class="full arrow arrow-right">
+      <i class="fas fa-chevron-right" data-view="right"></i>
+    </div>
+  </div>
+
+  <div class="row carousel">
+    <div class="fifth">
+     <i class="fas fa-circle dots"  data-carousel="1"></i>
+    </div>
+    <div class="fifth carousel">
+      <i class="far fa-circle dots"  data-carousel="2"></i>
+    </div>
+    <div class="fifth carousel " >
+      <i class="far fa-circle dots" data-carousel="3"></i>
+    </div>
+    <div class="fifth carousel" >
+      <i class="far fa-circle dots" data-carousel="4"></i>
+    </div>
+    <div class="fifth carousel" >
+      <i class="far fa-circle dots" data-carousel="5"></i>
+    </div>
+  </div>
+</div>
+  <script src="main.js"></script>
+</body>
+</html>
