@@ -48,6 +48,8 @@ const handleImg = event => {
     $imgs[counter].classList.remove('hidden');
     $dots[counter].classList.remove('far');
     $dots[counter].classList.add('fas');
+    stop();
+    timer = setInterval(interval, 3000);
   }
 };
 
@@ -71,7 +73,8 @@ const interval = () => {
   }
 };
 
-const timer = () => { setInterval(interval, 3000); };
-timer();
+let timer = setInterval(interval, 3000);
+
+const stop = () => clearInterval(timer);
 
 $container.addEventListener('click', handleImg);
