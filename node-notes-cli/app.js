@@ -18,6 +18,10 @@ if (process.argv[2] === 'read') {
     if (err) throw err;
     console.log('delete complete');
   });
+} else if (process.argv[2] === 'update') {
+  notesJson.notes[process.argv[3]] = process.argv[4];
+  fs.writeFile('data.json', JSON.stringify(notesJson), err => {
+    if (err) throw err;
+    console.log('delete complete');
+  });
 }
-
-// console.log(notesJson.notes);
