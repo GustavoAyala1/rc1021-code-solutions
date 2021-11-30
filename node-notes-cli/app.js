@@ -2,7 +2,7 @@ const fs = require('fs');
 const notesJson = require('./data.json');
 
 const updateJson = whatEvent => {
-  fs.writeFile('data.json', JSON.stringify(notesJson), err => {
+  fs.writeFile('data.json', JSON.stringify(notesJson, null, 2), err => {
     if (err) throw err;
     console.log(`${whatEvent} complete`);
   });
