@@ -8,7 +8,8 @@ const grades = {};
 app.use(express.json());
 
 app.post("/api/grades", (req, res) => {
-  const newGrade = req.body;
+  const { name, course, grade } = req.body;
+  const newGrade = { name, course, grade };
   const id = nextId;
   newGrade.id = id;
 
