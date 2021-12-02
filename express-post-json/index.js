@@ -8,15 +8,13 @@ const grades = {};
 app.use(express.json());
 
 app.post("/api/grades", (req, res) => {
-  const name = req.body.name;
-  const course = req.body.course;
-  const grade = req.body.grade;
+  const newGrade = req.body;
   const id = nextId;
+  newGrade.id = id;
 
-  grades[nextId] = { id, name, course, grade };
+  grades[id] = newGrade;
   nextId++;
-  res.status(201);
-  res.send(grades);
+  res.status(201).json(grades);
 });
 
 app.get("/api/grades", (req, res) => {
