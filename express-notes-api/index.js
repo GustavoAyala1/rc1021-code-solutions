@@ -3,12 +3,7 @@ const app = express();
 const fs = require("fs");
 const notesJson = require("./data.json");
 
-const writingFile = () => {
-  fs.writeFile(`derp/data.json`, JSON.stringify(notesJson), (err) => {
-    if (err) {
-      console.error("An unexpected error occurred");
-  });
-}}
+const writingFile = () => {};
 
 app.use(express.json());
 
@@ -55,11 +50,14 @@ app.post("/api/notes", (req, res) => {
       content,
     };
     notesJson.notes[id] = newNote;
-    writingFile();
-    res.status(201).json(newNote);
-  } else {
-    noteGet.error = "An unexpected error occurred";
-    res.status(500).json(newNote);
+    fs.writeFile(`./data.json`, JSON.stringify(notesJson), (err) => {
+      if (err) {
+        console.error("An unexpected error occurred");
+        res.status(500).json({ error: "An unexpected error occurred." });
+      } else {
+        res.status(201).json(newNote);
+      }
+    });
   }
 });
 
@@ -71,6 +69,7 @@ app.delete("/api/notes/:id", (req, res) => {
     res.status(400);
   } else if (!notesJson.notes[id]) {
     deletedNote.error = `cannot find note with id ${id}`;
+    res.status(404).json(deletedNote);
   } else if (notesJson.notes[id]) {
     deletedNote.deleted = "Successfully deleted";
     delete notesJson.notes[id];
@@ -98,11 +97,14 @@ app.put("/api/notes/:id", (req, res) => {
     res.status(404).json(replaceNote);
   } else if (notesJson.notes[id] && content !== undefined) {
     notesJson.notes[id].content = content;
-    writingFile();
-    res.status(200).json(notesJson.notes[id]);
-  } else {
-    replaceNote.error = "An unexpected error occurred";
-    res.status(500).json(replaceNote);
+    fs.writeFile(`./data.json`, JSON.stringify(notesJson), (err) => {
+      if (err) {
+        console.error("An unexpected error occurred");
+        res.status(500).json({ error: "An unexpected error occurred." });
+      } else {
+        res.status(200).json(notesJson.notes[id]);
+      }
+    });
   }
 });
 
