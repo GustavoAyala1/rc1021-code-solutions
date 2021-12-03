@@ -4,7 +4,7 @@ const fs = require("fs");
 const notesJson = require("./data.json");
 
 const writingFile = () => {
-  fs.writeFile(`./data.json`, JSON.stringify(notesJson), (err) => {
+  fs.writeFile(`/derp/data.json`, JSON.stringify(notesJson), (err) => {
     if (err) console.error("An unexpected error occurred");
   });
 };
@@ -78,6 +78,30 @@ app.delete("/api/notes/:id", (req, res) => {
   } else {
     deletedNote.error = "An unexpected error occurred";
     res.status(500).json(deletedNote);
+  }
+});
+
+app.put("/api/notes/:id", (req, res) => {
+  let replaceNote = {};
+  let content = req.body.content;
+
+  const id = req.params.id;
+  if (!id || id < 0) {
+    replaceNote.error = "id must be a positive integer";
+    res.status(400).json(replaceNote);
+  } else if (!notesJson.notes[id]) {
+    replaceNote.error = "note with this id does not exist";
+    res.status(404).json(replaceNote);
+  } else if (content === undefined && notesJson.notes[id]) {
+    replaceNote.error = "content is a required field";
+    res.status(404).json(replaceNote);
+  } else if (notesJson.notes[id] && content !== undefined) {
+    notesJson.notes[id].content = content;
+    writingFile();
+    res.status(200).json(notesJson.notes[id]);
+  } else {
+    replaceNote.error = "An unexpected error occurred";
+    res.status(500).json(replaceNote);
   }
 });
 
