@@ -3,6 +3,12 @@ const app = express();
 const fs = require("fs");
 const notesJson = require("./data.json");
 
+const writingFile = () => {
+  fs.writeFile(`./data.json`, JSON.stringify(notesJson), (err) => {
+    if (err) console.error("An unexpected error occurred");
+  });
+};
+
 app.use(express.json());
 
 app.get("/api/notes", (req, res) => {
@@ -31,7 +37,29 @@ app.get("/api/notes/:id", (req, res) => {
       res.status(404);
     }
   }
+
   res.json(noteGet);
+});
+
+app.post("/api/notes", (req, res) => {
+  const content = req.body.content;
+  let newNote = {};
+  if (content === undefined) {
+    newNote.error = "content is a require field";
+    res.status(400).json(newNote);
+  } else if (content) {
+    const id = notesJson.nextId++;
+    newNote = {
+      id,
+      content,
+    };
+    notesJson.notes[id] = newNote;
+    writingFile();
+    res.status(201).json(newNote);
+  } else {
+    noteGet.error = "An unexpected error occurred";
+    res.status(500).json(newNote);
+  }
 });
 
 app.listen(3000, () => {
