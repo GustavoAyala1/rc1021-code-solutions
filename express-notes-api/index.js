@@ -25,6 +25,7 @@ app.get("/api/notes/:id", (req, res) => {
   for (let notes in notesJson.notes) {
     if (notesJson.notes[req.params.id]) {
       noteGet = notesJson.notes[req.params.id];
+      res.status(200);
     } else if (req.params.id < 0) {
       noteGet.error = "Id must be a positive integer";
       res.status(400);
@@ -64,9 +65,9 @@ app.post("/api/notes", (req, res) => {
 app.delete("/api/notes/:id", (req, res) => {
   let deletedNote = {};
   const id = req.params.id;
-  if (id < 0) {
+  if (id < 0 || typeof id !== "number") {
     deletedNote.error = "id must be a positive integer";
-    res.status(400);
+    res.status(400).json(deletedNote);
   } else if (!notesJson.notes[id]) {
     deletedNote.error = `cannot find note with id ${id}`;
     res.status(404).json(deletedNote);
@@ -86,7 +87,7 @@ app.put("/api/notes/:id", (req, res) => {
   let content = req.body.content;
   const id = req.params.id;
 
-  if (!id || id < 0) {
+  if (!id || id < 0 || typeof id !== "number") {
     replaceNote.error = "id must be a positive integer";
     res.status(400).json(replaceNote);
   } else if (!notesJson.notes[id]) {
@@ -94,7 +95,7 @@ app.put("/api/notes/:id", (req, res) => {
     res.status(404).json(replaceNote);
   } else if (content === undefined && notesJson.notes[id]) {
     replaceNote.error = "content is a required field";
-    res.status(404).json(replaceNote);
+    res.status(400).json(replaceNote);
   } else if (notesJson.notes[id] && content !== undefined) {
     notesJson.notes[id].content = content;
     fs.writeFile(`./data.json`, JSON.stringify(notesJson), (err) => {
