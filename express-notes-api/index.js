@@ -4,10 +4,11 @@ const fs = require("fs");
 const notesJson = require("./data.json");
 
 const writingFile = () => {
-  fs.writeFile(`/derp/data.json`, JSON.stringify(notesJson), (err) => {
-    if (err) console.error("An unexpected error occurred");
+  fs.writeFile(`derp/data.json`, JSON.stringify(notesJson), (err) => {
+    if (err) {
+      console.error("An unexpected error occurred");
   });
-};
+}}
 
 app.use(express.json());
 
@@ -84,8 +85,8 @@ app.delete("/api/notes/:id", (req, res) => {
 app.put("/api/notes/:id", (req, res) => {
   let replaceNote = {};
   let content = req.body.content;
-
   const id = req.params.id;
+
   if (!id || id < 0) {
     replaceNote.error = "id must be a positive integer";
     res.status(400).json(replaceNote);
