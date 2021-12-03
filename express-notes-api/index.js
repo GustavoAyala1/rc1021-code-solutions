@@ -62,6 +62,25 @@ app.post("/api/notes", (req, res) => {
   }
 });
 
+app.delete("/api/notes/:id", (req, res) => {
+  let deletedNote = {};
+  const id = req.params.id;
+  if (id < 0) {
+    deletedNote.error = "id must be a positive integer";
+    res.status(400);
+  } else if (!notesJson.notes[id]) {
+    deletedNote.error = `cannot find note with id ${id}`;
+  } else if (notesJson.notes[id]) {
+    deletedNote.deleted = "Successfully deleted";
+    delete notesJson.notes[id];
+    writingFile();
+    res.status(204).json(deletedNote);
+  } else {
+    deletedNote.error = "An unexpected error occurred";
+    res.status(500).json(deletedNote);
+  }
+});
+
 app.listen(3000, () => {
   console.log("listening on port 3000");
 });
