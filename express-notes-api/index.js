@@ -21,16 +21,17 @@ app.get("/api/notes", (req, res) => {
 
 app.get("/api/notes/:id", (req, res) => {
   let noteGet = {};
+  let id = Math.trunc(+req.params.id);
 
   for (let notes in notesJson.notes) {
-    if (notesJson.notes[req.params.id]) {
-      noteGet = notesJson.notes[req.params.id];
+    if (notesJson.notes[id]) {
+      noteGet = notesJson.notes[id];
       res.status(200);
-    } else if (req.params.id < 0) {
+    } else if (id < 0 || isNaN(id)) {
       noteGet.error = "Id must be a positive integer";
       res.status(400);
-    } else if (!notesJson.notes[req.params.id]) {
-      noteGet.error = `Error: cannot find note with id ${req.params.id}`;
+    } else if (!notesJson.notes[id]) {
+      noteGet.error = `Error: cannot find note with id ${id}`;
       res.status(404);
     }
   }
@@ -41,7 +42,7 @@ app.get("/api/notes/:id", (req, res) => {
 app.post("/api/notes", (req, res) => {
   const content = req.body.content;
   let newNote = {};
-  if (content === undefined) {
+  if (content === undefined || content === "") {
     newNote.error = "content is a require field";
     res.status(400).json(newNote);
   } else if (content) {
@@ -64,7 +65,7 @@ app.post("/api/notes", (req, res) => {
 
 app.delete("/api/notes/:id", (req, res) => {
   let deletedNote = {};
-  const id = req.params.id;
+  let id = Math.trunc(+req.params.id);
   if (id < 0 || typeof id !== "number") {
     deletedNote.error = "id must be a positive integer";
     res.status(400).json(deletedNote);
@@ -85,9 +86,9 @@ app.delete("/api/notes/:id", (req, res) => {
 app.put("/api/notes/:id", (req, res) => {
   let replaceNote = {};
   let content = req.body.content;
-  const id = req.params.id;
+  let id = Math.trunc(+req.params.id);
 
-  if (!id || id < 0 || typeof id !== "number") {
+  if (!id || id < 0 || isNaN(id)) {
     replaceNote.error = "id must be a positive integer";
     res.status(400).json(replaceNote);
   } else if (!notesJson.notes[id]) {
