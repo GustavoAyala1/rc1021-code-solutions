@@ -21,13 +21,13 @@ app.get("/api/notes", (req, res) => {
 
 app.get("/api/notes/:id", (req, res) => {
   let noteGet = {};
-  let id = Math.trunc(+req.params.id);
+  let id = +req.params.id;
 
   for (let notes in notesJson.notes) {
     if (notesJson.notes[id]) {
       noteGet = notesJson.notes[id];
       res.status(200);
-    } else if (id < 0 || isNaN(id)) {
+    } else if (id < 0 || id) {
       noteGet.error = "Id must be a positive integer";
       res.status(400);
     } else if (!notesJson.notes[id]) {
