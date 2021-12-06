@@ -26,7 +26,7 @@ app.get('/api/notes/:id', (req, res) => {
   if (notesJson.notes[id]) {
     noteGet = notesJson.notes[id];
     res.status(200);
-  } else if (id < 0 || !Number.isInteger(id)) {
+  } else if (id < 0 || !Number.isInteger(id) || Number.isNaN(id)) {
     noteGet.error = 'Id must be a positive integer';
     res.status(400);
   } else if (!notesJson.notes[id]) {
@@ -84,9 +84,9 @@ app.delete('/api/notes/:id', (req, res) => {
 app.put('/api/notes/:id', (req, res) => {
   const replaceNote = {};
   const content = req.body.content;
-  const id = Math.trunc(+req.params.id);
+  const id = +req.params.id;
 
-  if (!id || id < 0 || isNaN(id)) {
+  if (!id || id < 0 || isNaN(id) || !Number.isInteger(id)) {
     replaceNote.error = 'id must be a positive integer';
     res.status(400).json(replaceNote);
   } else if (!notesJson.notes[id]) {
