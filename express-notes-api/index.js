@@ -3,8 +3,6 @@ const app = express();
 const fs = require('fs');
 const notesJson = require('./data.json');
 
-const writingFile = () => {};
-
 app.use(express.json());
 
 app.get('/api/notes', (req, res) => {
@@ -40,7 +38,7 @@ app.get('/api/notes/:id', (req, res) => {
 app.post('/api/notes', (req, res) => {
   const content = req.body.content;
   let newNote = {};
-  if (content === undefined || content === '') {
+  if (!content) {
     newNote.error = 'content is a require field';
     res.status(400).json(newNote);
   } else if (content) {
@@ -63,8 +61,9 @@ app.post('/api/notes', (req, res) => {
 
 app.delete('/api/notes/:id', (req, res) => {
   const deletedNote = {};
-  const id = Math.trunc(+req.params.id);
-  if (id < 0 || !Number.isInteger(id)) {
+  const id = +req.params.id;
+
+  if (id < 0 || !Number.isInteger(id) || Number.isNaN(id)) {
     deletedNote.error = 'id must be a positive integer';
     res.status(400).json(deletedNote);
   } else if (!notesJson.notes[id]) {
@@ -73,11 +72,14 @@ app.delete('/api/notes/:id', (req, res) => {
   } else if (notesJson.notes[id]) {
     deletedNote.deleted = 'Successfully deleted';
     delete notesJson.notes[id];
-    writingFile();
-    res.status(204).json(deletedNote);
-  } else {
-    deletedNote.error = 'An unexpected error occurred';
-    res.status(500).json(deletedNote);
+    fs.writeFile('./data.json', JSON.stringify(notesJson), err => {
+      if (err) {
+        console.error('An unexpected error occurred');
+        res.status(500).json({ error: 'An unexpected error occurred.' });
+      } else {
+        res.status(200).json(deletedNote);
+      }
+    });
   }
 });
 
