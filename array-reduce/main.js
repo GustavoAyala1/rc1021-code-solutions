@@ -29,7 +29,7 @@ const balanceFunction = (x, y) => {
 };
 
 const balance = account.reduce(balanceFunction, 0);
-const composite = traits.reduce((x, y) => Object.assign(x, y));
+const composite = traits.reduce((x, y) => Object.assign(x, y), {});
 
 console.log('sum:', sum);
 console.log('product:', product);
