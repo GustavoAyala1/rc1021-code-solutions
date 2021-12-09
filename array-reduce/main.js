@@ -21,10 +21,8 @@ const sum = numbers.reduce((x, y) => x + y);
 const product = numbers.reduce((x, y) => x * y);
 
 const balanceFunction = (x, y) => {
-
-  if (y.type === 'deposit') {
-    x += y.amount;
-  } else {
+  if (y.type === 'deposit') x += y.amount;
+  else {
     x -= y.amount;
   }
   return x;
