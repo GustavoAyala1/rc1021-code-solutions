@@ -1,0 +1,44 @@
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 35px;
+  left: 4px;
+  top: 2px;
+  background-color: white;
+  transition: 0.5s;
+}
+
+.slider.round {
+  border-radius: 50px;
+}
+
+.slider.round::before {
+  border-radius: 50%;
+}
+
+.onSlider {
+  background-color: yellowgreen;
+}
+
+.onSlider::before {
+  transform: translateX(50px);
+}
