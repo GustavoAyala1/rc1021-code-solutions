@@ -19,19 +19,19 @@ class CustomButton extends React.Component {
     // eslint-disable-next-line react/prop-types
 
     if (this.counter < 3) {
-      return <button onClick={this.handleClick}>{ clicked ? `Clicked: ${this.counter}` : this.props.text }</button>;
+      return <button onClick={this.handleClick}>{ clicked ? 'Hot Button' : this.props.text }</button>;
     } else if (this.counter >= 3 && this.counter < 6) {
-      return <button className='lowest' onClick={this.handleClick}>{ clicked ? `Clicked: ${this.counter}` : this.props.text }</button>;
+      return <button className='lowest' onClick={this.handleClick}>{ clicked ? 'Hot Button' : this.props.text }</button>;
     } else if (this.counter >= 6 && this.counter < 9) {
-      return <button className='low' onClick={this.handleClick}>{ clicked ? `Clicked: ${this.counter}` : this.props.text }</button>;
+      return <button className='low' onClick={this.handleClick}>{ clicked ? 'Hot Button' : this.props.text }</button>;
     } else if (this.counter >= 9 && this.counter < 12) {
-      return <button className='forgotten' onClick={this.handleClick}>{ clicked ? `Clicked: ${this.counter}` : this.props.text }</button>;
+      return <button className='forgotten' onClick={this.handleClick}>{ clicked ? 'Hot Button' : this.props.text }</button>;
     } else if (this.counter >= 12 && this.counter < 15) {
-      return <button className='medium' onClick={this.handleClick}>{ clicked ? `Clicked: ${this.counter}` : this.props.text }</button>;
+      return <button className='medium' onClick={this.handleClick}>{ clicked ? 'Hot Button' : this.props.text }</button>;
     } else if (this.counter >= 15 && this.counter < 18) {
-      return <button className='hot' onClick={this.handleClick}>{ clicked ? `Clicked: ${this.counter}` : this.props.text }</button>;
+      return <button className='hot' onClick={this.handleClick}>{ clicked ? 'Hot Button' : this.props.text }</button>;
     } else if (this.counter >= 18) {
-      return <button className='hottest' onClick={this.handleClick}>{ clicked ? `Clicked: ${this.counter}` : this.props.text }</button>;
+      return <button className='hottest' onClick={this.handleClick}>{ clicked ? 'Hot Button' : this.props.text }</button>;
     }
 
   }
