@@ -13,6 +13,6 @@ const list = pokedex.map(number =>
   <li key={number.number.toString()}>{number.name}</li>
 );
 
-const element = <ul> {list}</ul>;
+const element = <ul> {list} </ul>;
 
 ReactDOM.render(element, document.querySelector('#root'));
