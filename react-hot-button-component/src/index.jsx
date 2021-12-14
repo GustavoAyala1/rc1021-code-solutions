@@ -6,31 +6,32 @@ class CustomButton extends React.Component {
     super(props);
     this.state = { clicks: 0 };
     this.handleClick = this.handleClick.bind(this);
-    this.counter = 0;
 
   }
 
   handleClick() {
-    this.setState({ clicks: this.counter++ });
-    this.counter++;
+    this.setState({ clicks: this.state.clicks + 1 });
+
   }
 
   render() {
 
+    const { clicks } = this.state;
+
     let classes;
     // eslint-disable-next-line react/prop-types
 
-    if (this.counter >= 3 && this.counter < 6) {
+    if (clicks >= 3 && clicks < 6) {
       classes = 'lowest';
-    } else if (this.counter >= 6 && this.counter < 9) {
+    } else if (clicks >= 6 && clicks < 9) {
       classes = 'low';
-    } else if (this.counter >= 9 && this.counter < 12) {
+    } else if (clicks >= 9 && clicks < 12) {
       classes = 'forgotten';
-    } else if (this.counter >= 12 && this.counter < 15) {
+    } else if (clicks >= 12 && clicks < 15) {
       classes = 'medium';
-    } else if (this.counter >= 15 && this.counter < 18) {
+    } else if (clicks >= 15 && clicks < 18) {
       classes = 'hot';
-    } else if (this.counter >= 18) {
+    } else if (clicks >= 18) {
       classes = 'hottest';
     }
     return (<button className= {classes} onClick={this.handleClick}>Hot Button!</button>);
