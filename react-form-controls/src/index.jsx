@@ -29,7 +29,7 @@ class NewsLetterForm extends React.Component {
 
     return (
       <form onSubmit={this.handleSubmit}>
-        <input type="email" placeholder='Email Here' name="email" onChange={this.handleChange}></input>
+        <input type="email" placeholder='Email Here' value={this.state.email} name="email" onChange={this.handleChange}></input>
         <button >Sign Up</button>
       </form>
     );
