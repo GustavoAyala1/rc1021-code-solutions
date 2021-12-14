@@ -18,8 +18,16 @@
 
 .btn {
   margin-top: 10px;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  color: red;
+  background-color: #fff;
+}
+
+.btn:active {
+  width: 60px;
+  height: 60px;
 }
 
 .stopBtn {
