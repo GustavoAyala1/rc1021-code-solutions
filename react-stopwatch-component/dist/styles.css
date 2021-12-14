@@ -1,0 +1,35 @@
+.stopDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 50%;
+  font-size: 3rem;
+  width: 150px;
+  height: 150px;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.stopBtn {
+  background-color: #fff;
+  border: 5px solid black;
+  border-top: none;
+  border-bottom: none;
+}
+
+/*
+.playBtn{
+
+} */
