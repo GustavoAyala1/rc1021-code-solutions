@@ -1,0 +1,19 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.correct {
+  margin-left: 10px;
+  color: chartreuse;
+}
+
+.wrong {
+  margin-left: 10px;
+  color: crimson;
+}
+
+.displayHidden {
+  display: none;
+}
