@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.navDiv {
+  height: 100vh;
+  background-color: #fff;
+}
+
+.navDivDark {
+  height: 100vh;
+  background-color: grey;
+}
+
+.menu {
+  background-color: #fff;
+}
+
+.displayHidden {
+  display: none;
+}
+
+.menuBrg {
+  width: 20px;
+  height: 20px;
+}
+
+.brgBtn {
+  background-color: #fff;
+  border: none;
+}
+
+.divMenu {
+  background-color: #fff;
+  width: 100px;
+  height: 100vh;
+  padding-left: 10px;
+}
+
+.menuItems {
+  padding-left: 5px;
+}
+
+.menuItems h6 {
+  margin-top: 10px;
+}
