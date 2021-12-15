@@ -17,3 +17,10 @@
 .displayHidden {
   display: none;
 }
+
+.message {
+  margin-top: 0;
+  color: red;
+  font-size: 12px;
+  padding-left: 20%;
+}

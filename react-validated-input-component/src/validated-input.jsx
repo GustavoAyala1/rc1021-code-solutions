@@ -8,12 +8,7 @@ class Password extends React.Component {
     this.state = {
       password: '',
       acceptable: null,
-      tooShort: true,
-      noPw: true,
-      hasNum: false,
-      hasCap: false,
-      isSpecial: false
-
+      message: ''
     };
   }
 
@@ -21,8 +16,21 @@ class Password extends React.Component {
     const target = event.target;
     const value = target.value;
     const name = target.name;
+    const spChars = /[!@#$%^&*()]+/;
+    const capitals = /[A-Z]/;
 
     this.setState({ [name]: value });
+    if (value.length === 0) {
+      this.setState({ message: 'A password is required', acceptable: false });
+    } else if (value.length < 8) {
+      this.setState({ message: 'Your password is too short!', acceptable: false });
+    } else if (!spChars.test(value)) {
+      this.setState({ acceptable: false, message: 'Needs a special character!' });
+    } else if (!capitals.test(value)) {
+      this.setState({ acceptable: false, message: 'Needs a capital letter!' });
+    } else {
+      this.setState({ acceptable: true, message: '' });
+    }
   }
 
   handleSubmit(e) {
@@ -31,9 +39,9 @@ class Password extends React.Component {
   }
 
   render() {
-    const { acceptable } = this.state;
+    const { acceptable, message } = this.state;
     let classes;
-    if (acceptable === null) { classes = 'displayHidden'; } else if (acceptable === 'correct') { classes = 'fas fa-check correct'; } else if (acceptable === 'wrong') { classes = 'fas fa-times-circle wrong'; }
+    if (acceptable === null) { classes = 'displayHidden'; } else if (acceptable) { classes = 'fas fa-check correct'; } else if (!acceptable) { classes = 'fas fa-times-circle wrong'; }
 
     return (
       <form onSubmit={this.handleSubmit} className='form'>
@@ -43,6 +51,7 @@ class Password extends React.Component {
           <input value={this.state.password} name='password' type='password' onChange={this.handleChange}></input>
           <i className={classes}></i>
           </div>
+          <p className='message'>{message}</p>
         </label>
       </form>
 
