@@ -6,16 +6,21 @@ class StopWatch extends React.Component {
     this.state = { time: 0, playing: false };
     this.handleTimer = null;
     this.handleClick = this.handleClick.bind(this);
-    this.resetState = this.resetState.bind(this);
+    this.handleCounter = this.handleCounter.bind(this);
+
   }
 
   handleClick() {
-    if (this.state.time > 1 && !this.state.playing) {
-      this.setState({ time: 0, playing: false });
-    } else {
-      this.setState({ time: this.state.time + 1, playing: !this.state.playing });
+    const { time, playing } = this.state;
+
+    clearInterval(this.handleTimer);
+
+    if (time > 0 && playing) {
+      this.setState({ playing: false });
+    } else if (!playing && time > 0) { this.setState({ time: 0 }); } else {
+      this.setState({ time: time + 1, playing: !playing });
+      this.handleCounter();
     }
-    // this.setState({ time: this.state.time + 1, playing: !this.state.playing });
 
   }
 
@@ -25,15 +30,8 @@ class StopWatch extends React.Component {
     }, 1000);
   }
 
-  resetState() {
-    this.setState({ time: 0 });
-    this.handleClick();
-  }
-
   render() {
     const { time, playing } = this.state;
-
-    if (time === 1) { this.handleCounter(); } else if (!playing) { clearInterval(this.handleTimer); }
 
     return (
     <div className='stopDiv'>
