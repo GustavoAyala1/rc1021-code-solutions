@@ -10,29 +10,34 @@ class Accordion extends React.Component {
   }
 
   handleClick(e) {
-    const target = e.target.nextElementSibling;
-    target.classList.toggle('hidden');
+    // const target = e.target;
+    // console.log(target);
+    // target.classList.toggle('hidden');
 
   }
 
   render() {
     const { items } = this.props;
-
-    const arrayItem = items.map(first => [Object.keys(first), Object.values(first)]);
+    const arrayItem = items.map(first => [first.id, first.title, first.content]);
 
     const elements = arrayItem.map(el => (
+
       <div key={el[0]}>
-        <p className='header' onClick={this.handleClick}>{el[0]}</p>
-        <p className='body hidden true'>{el[1]}</p>
+        <div>
+           <p className='header' onClick={this.handleClick}>{el[1]}</p>
+        </div>
+        <div>
+          <p className='body hidden true'>{el[2]}</p>
+        </div>
       </div>
-    )
-    );
+
+    ));
 
     return (
       <div>
-        { elements }
+        <h1>HI</h1>
+         { elements }
       </div>
-
     );
   }
 }
