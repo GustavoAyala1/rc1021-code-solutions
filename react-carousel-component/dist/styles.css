@@ -1,0 +1,31 @@
+#root {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+}
+
+.hidden {
+  display: none;
+}
+
+.carousel {
+  position: relative;
+  height: 100%;
+}
+
+.arrow {
+  position: relative;
+  margin: 0 30px;
+  bottom: 90px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
