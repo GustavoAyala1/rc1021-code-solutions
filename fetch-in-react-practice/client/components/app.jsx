@@ -89,10 +89,8 @@ export default class App extends React.Component {
           },
           body: JSON.stringify({ isCompleted: copyTodo[i].isCompleted })
         })
-          .then(res => {
-
-            return res.json();
-          }).then(data => {
+          .then(res => res.json())
+          .then(data => {
 
             this.setState({
               todos: copyTodo
