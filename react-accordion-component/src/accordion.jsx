@@ -5,38 +5,35 @@ class Accordion extends React.Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
     this.state = {
-      classHid: 'body hidden'
+      id: ''
     };
   }
 
   handleClick(e) {
-    // const target = e.target;
-    // console.log(target);
-    // target.classList.toggle('hidden');
-
+    const target = e;
+    if (this.state.id === target) {
+      this.setState({ id: '' });
+    } else {
+      this.setState({ id: target });
+    }
   }
 
   render() {
     const { items } = this.props;
-    const arrayItem = items.map(first => [first.id, first.title, first.content]);
 
-    const elements = arrayItem.map(el => (
-
-      <div key={el[0]}>
-        <div>
-           <p className='header' onClick={this.handleClick}>{el[1]}</p>
-        </div>
-        <div>
-          <p className='body hidden true'>{el[2]}</p>
-        </div>
+    const arrayItem = items.map(item =>
+      (
+       // eslint-disable-next-line react/jsx-key
+       <div onClick={() => this.handleClick(item.id)}>
+        <p className='header' >{item.title}</p>
+        <p className={this.state.id === item.id ? 'body' : 'body hidden'}>{item.content}</p>
       </div>
-
-    ));
+      )
+    );
 
     return (
       <div>
-        <h1>HI</h1>
-         { elements }
+         { arrayItem }
       </div>
     );
   }
