@@ -1,0 +1,16 @@
+User Can Sign Up.
+  The client enters a username
+    if the username isnt already being used then it allows it
+      and sends you to the sign in page
+      the username is added to the database and the password is hashed and saved
+User can sign in.
+    On the sign in page the user enters their username and password
+    the DB is queried to see if that username exists and if it does then
+    the password is verified to see if it matches the hashed password
+    if it does a token is then given to the user so he can stay logged i
+User can stay signed in (even if they refresh the page).
+  if the user refreshes after logging in the token is checked to see if its good
+  if it isnt then the user has to log in again
+  if it is then the user stays logged in
+User can sign out.
+  the token is removed and the use is taken back to the sign in page
