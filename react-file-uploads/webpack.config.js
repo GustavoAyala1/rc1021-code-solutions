@@ -33,7 +33,10 @@ module.exports = {
     host: '0.0.0.0',
     port: process.env.DEV_SERVER_PORT,
     static: {
-      directory: serverPublicPath
+      directory: serverPublicPath,
+      watch: {
+        ignored: path.join(serverPublicPath, 'images')
+      }
     },
     proxy: {
       '/api': `http://localhost:${process.env.PORT}`
